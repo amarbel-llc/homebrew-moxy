@@ -6,6 +6,7 @@ that aggregates multiple child MCP servers into a single unified server.
 ## Install
 
 ```sh
+brew tap oven-sh/bun       # required for bun dependency
 brew tap amarbel-llc/moxy
 brew install moxy
 ```

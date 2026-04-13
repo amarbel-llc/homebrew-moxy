@@ -11,12 +11,12 @@ class Moxy < Formula
     end
   end
 
+  depends_on "bun"         # get-hubbed, get-hubbed-external, hamster (tap: oven-sh/bun)
   depends_on "coreutils"  # GNU stat (folio, folio-external)
   depends_on "gh"          # get-hubbed, get-hubbed-external
   depends_on "git"         # grit
   depends_on "go"          # hamster
   depends_on "jq"          # folio, grit, jq, get-hubbed
-  depends_on "oven-sh/bun/bun" # get-hubbed, get-hubbed-external, hamster
   depends_on "python@3"    # freud
   depends_on "ripgrep"     # rg
 

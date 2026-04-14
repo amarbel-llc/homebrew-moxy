@@ -6,7 +6,7 @@ class Moxy < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/amarbel-llc/moxy/releases/download/v#{version}/moxy-#{version}-darwin-arm64.tar.gz"
+      url "https://github.com/amarbel-llc/moxy/releases/download/v#{version}/moxy-0.1.0-darwin-arm64.tar.gz"
       sha256 "b0fbb9efa6b1f159e9953b9cb002e0af228d6dda6b72fdc84fc0544b458449f4"
     end
   end

@@ -1,13 +1,13 @@
 class Moxy < Formula
   desc "MCP proxy that aggregates multiple child MCP servers"
   homepage "https://github.com/amarbel-llc/moxy"
-  version "0.1.0"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/amarbel-llc/moxy/releases/download/v#{version}/moxy-#{version}-darwin-arm64.tar.gz"
-      sha256 "4a3621ca95ba8ee085df55be60a3b278281b461e69511d24ecd0b4d79d57ea9e"
+      sha256 "b0fbb9efa6b1f159e9953b9cb002e0af228d6dda6b72fdc84fc0544b458449f4"
     end
   end
 
@@ -26,12 +26,6 @@ class Moxy < Formula
     man1.install Dir["share/man/man1/*"]
     man5.install Dir["share/man/man5/*"]
     man7.install Dir["share/man/man7/*"]
-
-    # Resolve @BIN@ placeholders to the installed moxin bin directories.
-    Dir.glob(share/"moxy/moxins/*/*.toml").each do |f|
-      moxin_name = f[%r{moxins/([^/]+)/}, 1]
-      inreplace f, "@BIN@", "#{share}/moxy/moxins/#{moxin_name}/bin"
-    end
   end
 
   test do
